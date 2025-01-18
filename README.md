@@ -46,8 +46,11 @@ The YOLOv8 model weights (`best.pt` and `last.pt`) are available in the `dataset
    streamlit run main.py
    ```
 2. Open the application in your browser (usually available at `http://localhost:8501`).
-3. Upload an image from the `test_images` folder or any compatible image for spine segmentation.
-4. View the predicted image with bounding boxes for the spine parts.
+3. ![Screenshot (696)](https://github.com/user-attachments/assets/f02f37b8-542b-4e86-a698-8c86c57d9471)
+4. Upload an image from the `test_images` folder or any compatible image for spine segmentation.
+5. View the predicted image with bounding boxes for the spine parts.
+6. ![Screenshot (697)](https://github.com/user-attachments/assets/6473c417-729a-40ca-aee3-d26e9b89af37)
+
 
 ---
 
