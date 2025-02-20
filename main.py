@@ -43,18 +43,19 @@ if uploaded_file is not None:
 
         # Draw bounding boxes on the image
         for box in predictions.boxes:
-            # Extract coordinates and class ID
+            # Extract coordinates, class ID, and confidence score
             x1, y1, x2, y2 = map(int, box.xyxy[0])
             class_id = int(box.cls[0])
             class_name = class_names[class_id]
             color = class_colors[class_name]
+            confidence = box.conf[0]
 
             # Draw bounding box
             bbox_image = cv2.rectangle(bbox_image, (x1, y1), (x2, y2), color, 2)
             
-            # Draw class name in bold
+            # Draw class name and confidence score in bold
             bbox_image = cv2.putText(
-                bbox_image, class_name, (x1, y1 - 10),
+                bbox_image, f"{class_name} ({confidence:.2f})", (x1, y1 - 10),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.8, color, 2, lineType=cv2.LINE_AA
             )
 
