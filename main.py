@@ -8,7 +8,7 @@ import cv2
 st.title("Spine Segmentation Using Yolov8")
 
 # Load YOLO model
-model = YOLO(r"C:/Users/iproat26/Desktop/spin_segnmentation/datasets/runs/detect/train2/weights/best.pt")  # Replace with your YOLO model file if custom
+model = YOLO(r"datasets/runs/detect/train2/weights/best.pt")  # Replace with your YOLO model file if custom
 
 # Define class names and assign a unique color for each class
 class_names = ['L1', 'L2', 'L3', 'L4', 'L5', 'S1']
